@@ -15,6 +15,12 @@ class VenueCreate(BaseModel):
     longitude: float
     google_place_id: Optional[str]
 
+class VenueResponse(VenueCreate):
+    id: int
+
+    class Config:
+        orm_mode = True
+
 class ProjectDetailPayload(BaseModel):
     dates_config: Optional[Dict[str, Any]] = Field(default_factory=dict)
     catering_config: Optional[Dict[str, Any]] = Field(default_factory=dict)

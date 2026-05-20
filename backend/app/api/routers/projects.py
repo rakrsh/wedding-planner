@@ -56,6 +56,17 @@ def export_project_json(project_id: UUID, db: Session = Depends(get_db_session),
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Project not found")
     detail = db.query(ProjectDetail).filter(ProjectDetail.project_id == project.id).first()
     return {
-        "project": project,
-        "details": detail,
+        "project": {
+            "id": str(project.id),
+            "user_id": project.user_id,
+            "title": project.title,
+            "status": project.status.value,
+            "created_at": project.created_at.isoformat() if project.created_at else None,
+        },
+        "details": {
+            "dates_config": detail.dates_config if detail else {},
+            "catering_config": detail.catering_config if detail else {},
+            "logistics_config": detail.logistics_config if detail else {},
+            "budget_config": detail.budget_config if detail else {},
+        },
     }
