@@ -1,0 +1,11 @@
+{
+  "realm": "wedding-planner",
+  "enabled": true,
+  "roles": {
+    "realm": [
+      {"name": "ROLE_ADMIN"},
+      {"name": "ROLE_USER"}
+    ]
+  },
+  "clients": []
+}
