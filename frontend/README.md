@@ -1,6 +1,6 @@
-# Frontend (Next.js)
+# Frontend (React + Vite)
 
-This is a minimal Next.js scaffold for the Indian Wedding Planner UI.
+This is a minimal React (Vite) scaffold for the Indian Wedding Planner UI.
 
 Run locally:
 
@@ -10,7 +10,7 @@ npm install
 npm run dev
 ```
 
-Open: http://localhost:3000
+Open: http://localhost:5173
 
 Notes:
 - The pages call the backend at `http://localhost:8000`.

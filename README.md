@@ -30,19 +30,19 @@ http://localhost:8000/docs
 - Document data: MongoDB for invitation template serialization
 - Async and export: Redis for brokered background tasks
 
-## Mobile Frontend
+## Frontend
 
-- `frontend-mobile/`: Expo React Native scaffold
+- `frontend/`: React + Vite web scaffold
 
-Run mobile frontend locally:
+Run frontend locally:
 
 ```bash
-cd frontend-mobile
+cd frontend
 npm install
-npm run start
+npm run dev
 ```
 
-Use the Expo developer tools to open on a simulator or device (or run `npm run android` / `npm run ios`).
+Open: http://localhost:5173
 
 Notes:
-- The mobile app calls the backend at `http://localhost:8000` and will require a valid Keycloak access token to interact with protected endpoints such as `/projects`.
+- The frontend calls the backend at `http://localhost:8000` and will require a valid Keycloak access token to interact with protected endpoints such as `/projects`.
