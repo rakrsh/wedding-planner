@@ -29,3 +29,20 @@ http://localhost:8000/docs
 - Relational data: PostgreSQL for wedding projects, venue geolocation, and workflow state
 - Document data: MongoDB for invitation template serialization
 - Async and export: Redis for brokered background tasks
+
+## Mobile Frontend
+
+- `frontend-mobile/`: Expo React Native scaffold
+
+Run mobile frontend locally:
+
+```bash
+cd frontend-mobile
+npm install
+npm run start
+```
+
+Use the Expo developer tools to open on a simulator or device (or run `npm run android` / `npm run ios`).
+
+Notes:
+- The mobile app calls the backend at `http://localhost:8000` and will require a valid Keycloak access token to interact with protected endpoints such as `/projects`.
