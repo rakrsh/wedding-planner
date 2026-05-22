@@ -23,6 +23,12 @@ docker compose up --build
 http://localhost:8000/docs
 ```
 
+## Documentation
+
+Project docs are published automatically from the `docs/` directory on each push to the `main` branch using GitHub Actions and GitHub Pages.
+
+Visit the documentation site once GitHub Pages is configured for this repository.
+
 ## Architecture
 
 - Identity: Keycloak OIDC / OAuth2 with JWT verification and role-based access control
