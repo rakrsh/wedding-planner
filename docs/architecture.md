@@ -38,3 +38,7 @@
 cd infra
 docker compose up --build
 ```
+
+## Documentation Site
+
+The repository includes a `docs/` site that is published automatically from the `main` branch. The GitHub Actions workflow located at `.github/workflows/deploy-docs.yml` uploads the `docs/` directory to GitHub Pages after each push.
